@@ -1,7 +1,7 @@
 % Main pipeline for artifact removing
 % Author: Albert J. Linan
-%%0 - It is needed to load eeglab and open a raw dataset
-%%1 - Creating the markers for the gradient artifact removing
+%%-0 - It is needed to load eeglab and open a raw dataset
+%%-1 - Creating the markers for the gradient artifact removing
 
 % Inputs and outputs
 
@@ -97,21 +97,21 @@ xlabel(' Points ')
 legend('Original EEG', 'GA Removed EEG');
 hold off
 
-%% 3 - Downsampling the signal from 5000Hz to 250Hz
+%%-3 - Downsampling the signal from 5000Hz to 250Hz
 
 fprintf('\n--->>>---> 3 - Downsampling the signal from original Hz to 250Hz...\n\n');
 
 freq = 250;
 [EEGDWS] = pop_resample(EEGGAR, freq);
 
-%% 4 - Creating the markers for the pulse artifact removing(qrs)
+%%-4 - Creating the markers for the pulse artifact removing(qrs)
 
 fprintf('\n--->>>---> 4 - Creating markers for the pulse artifact removing...\n\n');
 
 ecgchan = 32;
 [EEGQRS,~] = pop_fmrib_qrsdetect(EEGDWS,ecgchan,'qrs','no');
 
-%% 5 - Applying ICA
+%%-5 - Applying ICA
 
 fprintf('\n--->>>---> 5 - Applying ICA...\n\n');
 
@@ -119,7 +119,7 @@ fprintf('\n--->>>---> 5 - Applying ICA...\n\n');
 pop_editoptions('option_computeica', 1 );
 EEGICA = pop_runica( EEGQRS, 'icatype', 'runica', 'chanind', 1:31, 'extended', 1);
 
-%% 6 - Applying EEG BCG Correction
+%%-6 - Applying EEG BCG Correction
 
 fprintf('\n--->>>---> 6 - Applying BCG Correction...\n\n');
 
