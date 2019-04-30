@@ -1,8 +1,7 @@
 % Main pipeline for artifact removing
 % Author: Albert J. Linan
-%% 0 - It is needed to load eeglab and open a raw dataset
-
-%% 1 - Creating the markers for the gradient artifact removing
+%%0 - It is needed to load eeglab and open a raw dataset
+%%1 - Creating the markers for the gradient artifact removing
 
 % Inputs and outputs
 
