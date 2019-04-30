@@ -50,7 +50,7 @@ volumes = 1;
 disp('Press a key to continue !') 
 pause;
 
-%% 2 - Removing the gradient artifact
+%%-2 - Removing the gradient artifact
 
 fprintf('\n--->>>---> 2 - Removing the gradient artifact...\n\n');
 
