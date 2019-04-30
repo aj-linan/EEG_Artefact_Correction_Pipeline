@@ -58,7 +58,7 @@ fprintf('\n--->>>---> 2 - Removing the gradient artifact...\n\n');
 EEGMARK.data = double(EEGMARK.data);
 
 % Load the functions from the following folder
-addpath(genpath('fmrib1.21'))
+addpath(genpath('fmrib.21'))
 
 % Apply artifact correction
 
